@@ -74,7 +74,9 @@ Parametro id: ID empleado.
 ```
 Parametro id: ID empleado.
 
-2. Areas
+2. Areas.
+
+
 2.1. GET: Obtiene una lista con todas las areas.
 
 ```bash
