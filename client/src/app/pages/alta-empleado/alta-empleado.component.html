@@ -1,0 +1,43 @@
+<div class="centered">
+  <div class="main">
+    <div class="title"><h1>Alta empleado</h1></div>
+      <form #altaForm="ngForm" (ngSubmit)="onSubmit(altaForm.value)">
+        <label for="fullname">Nombre Completo</label>
+        <input type="text" class="form-control" name="fullname" ngModel />
+        <label for="DNI">DNI</label>
+        <input type="text" class="form-control" name="DNI" ngModel />
+        <label for="date_birth">Fecha de nacimiento</label>
+        <input type="date" class="form-control" name="date_birth" ngModel />
+        <label for="developer">Es desarrollador?</label>
+        <br>
+        <div class="d-flex">
+          <input type="radio" id="si" name="developer" value="true" ngModel />
+          <label for="si"><span>Si</span></label><br />
+          <input type="radio" id="no" name="developer" value="false" ngModel />
+          <label for="no">No</label><br /></div>
+        <label for="description">Descripcion</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Descripcion"
+          name="description"
+          ngModel
+        />
+        <label for="area">Area</label>
+        <select class="form-control" name="AreaId" ngModel>
+          <option [value]="area.id" *ngFor="let area of areas">
+            {{ area.name }}
+          </option>
+        </select>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-dark">
+            Crear
+          </button>
+          <button [routerLink]="['/empleados']" class="btn btn-light">
+            Cancel
+          </button>
+        </div>
+      </form>
+  </div>
+</div>

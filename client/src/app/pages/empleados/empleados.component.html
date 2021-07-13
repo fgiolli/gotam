@@ -1,0 +1,30 @@
+<div class="centered">
+  <div class="main">
+    <div class="title">Empleados</div>
+    <div class="box">
+        <table style="width:100%">
+            <tr>
+              <th>Nombre completo</th>
+              <th>DNI</th>
+              <th>Fecha de nacimiento</th>
+              <th>Desarrollador</th>
+              <th>Descripcion</th>
+              <th>Area</th>
+            </tr>
+            <tr *ngFor="let empleado of empleados" (click)="getIndex(empleado)" class="bordered">
+              
+              <td>{{empleado.fullname}}</td>
+              <td>{{empleado.DNI}}</td>
+              <td>{{empleado.date_birth}}</td>
+              <td>{{empleado.developer}}</td>
+              <td>{{empleado.description}}</td>
+              <td>{{empleado.Area.name}}</td>
+            </tr>
+          </table>
+          <div class="groupsbutton">
+            <button type="button" [routerLink]="['/alta']" class="btn btn-success">Agregar</button>
+            <button type="button" (click)="bajaEmpleado()" class="btn  btn-danger">Eliminar el DNI {{index}}</button></div>
+        </div> 
+    </div>
+</div>
+ 
