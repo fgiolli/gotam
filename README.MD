@@ -39,9 +39,6 @@ node server.js
 cd client && ng build
 ```
 
-## DER, Diagrama de entidad-relacion
-![Empleado belongs to Area](der.png)
-
 ## API Usage
 1. Empleados
 
